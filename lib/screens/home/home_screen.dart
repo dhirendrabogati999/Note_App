@@ -6,6 +6,7 @@ import 'package:note_app/constants/app_sizes.dart';
 import 'package:note_app/constants/app_spacing.dart';
 import 'package:note_app/widgets/common/common_app_bar.dart';
 import 'package:note_app/widgets/common/common_bottom_nav.dart';
+import 'package:note_app/widgets/common/common_bottom_sheet.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -35,7 +36,19 @@ class HomeScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppSizes.radiusLarge),
           ),
           onPressed: (){
-      
+            showModalBottomSheet(
+              context: context, 
+              isScrollControlled: true,
+              builder: (context){
+                return CommonBottomSheet(
+                  buttonText: "Save", 
+                  onSave: (title, description) {
+                    debugPrint('Title: $title');
+                    debugPrint('Description: $description');
+                  }
+                );
+              }
+            );      
           },
           child:const Icon(Icons.add),
         ),
@@ -51,8 +64,7 @@ class HomeScreen extends StatelessWidget {
               context.go('/deleted');
             }
           },
-        ),
-      
+        ),     
       ),
     );
   }

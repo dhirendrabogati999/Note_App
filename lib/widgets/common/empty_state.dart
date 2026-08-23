@@ -27,7 +27,7 @@ class EmptyState extends StatelessWidget{
         padding: const EdgeInsets.all(AppSpacing.lg),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: AppColors.border,
+          color: AppColors.emptyState,
           borderRadius: BorderRadius.circular(AppSizes.radiusMedium),
         ),
         child: Column(
