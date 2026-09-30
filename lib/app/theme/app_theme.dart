@@ -19,7 +19,7 @@ class AppTheme{
       elevation: 0,
     ),
 
-    cardTheme: const CardTheme(
+    cardTheme: const CardThemeData(
       color: AppColors.white,
       elevation: 0,
     ),
