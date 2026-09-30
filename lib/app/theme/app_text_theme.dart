@@ -24,6 +24,12 @@ class AppTextTheme {
       color: AppColors.primary,
     ),
 
+    titleSmall: TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+      color: AppColors.textPrimary,
+    ),
+
     bodyMedium: TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.bold,
